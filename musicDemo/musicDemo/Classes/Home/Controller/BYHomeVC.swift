@@ -28,7 +28,10 @@ extension BYHomeVC {
     }
     /// 搜索按钮点击
     @objc fileprivate func search() {
-        ELPrint("searchClick")
+        /// 跳转搜索界面
+        let searchVC = BYSearchVC()
+        let searchNav = BYNavigationVC(rootViewController: searchVC)
+        present(searchNav, animated: true, completion: nil)  
     }
     /// 设置 UI
     fileprivate func setupUI() {

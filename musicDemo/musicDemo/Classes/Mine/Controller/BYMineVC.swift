@@ -27,7 +27,7 @@ extension BYMineVC {
     }
     /// 设置按钮的点击
     @objc fileprivate func settingClick() {
-        ELPrint("settingClick")
+        BYPrint("settingClick")
     }
     /// 设置 UI
     fileprivate func setupUI() {
