@@ -24,6 +24,9 @@ class BYTabBarVC: UITabBarController {
         super.viewDidLoad()
         setupChildVC()
     }
+    deinit {
+        BYPrint("死了")
+    }
     
 }
 

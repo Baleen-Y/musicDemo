@@ -14,7 +14,8 @@ import UIKit
 
 fileprivate let BYVersion = "version"
 
-struct BYChoseRootVC {
+class BYChoseRootVC: NSObject {
+    
     static func choseRootVC() -> UIViewController {
         /// 1. 获取当前版本号
         let curVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
