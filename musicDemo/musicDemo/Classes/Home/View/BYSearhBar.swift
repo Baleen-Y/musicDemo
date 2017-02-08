@@ -55,7 +55,6 @@ class BYSearhBar: UIView {
         searchBar.delegate = self
         searchBar.placeholder = "请输入搜索的关键字"
         searchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
-        searchBar.setImage(UIImage(), for: .search, state: .normal)
         self.searchBar = searchBar
         let typeBtn = UIButton(type: .custom)
         typeBtn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
