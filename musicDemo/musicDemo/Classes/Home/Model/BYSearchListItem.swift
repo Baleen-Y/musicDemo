@@ -5,7 +5,9 @@
 //  Created by Baleen.Y on 2/7/17.
 //  Copyright © 2017 Baleen.Y. All rights reserved.
 //
-
+/*
+ 搜索结果模型
+ */
 import UIKit
 import Alamofire
 import MJExtension
@@ -53,7 +55,7 @@ extension BYSearchListItem {
 
 // MARK: - 获取数据的方法
 extension BYSearchListItem {
-
+    
     /// 加载搜索的数据
     ///
     /// - Parameters:
@@ -61,21 +63,21 @@ extension BYSearchListItem {
     ///   - content: 搜索的内容
     ///   - page: 搜索结果显示第几页 --- 默认第一页
     ///   - limit: 每页显示的行数 --- 默认 20 行
-    ///   - result: 返回的结果模型
-    static func loadResult(_ type: SearchType, _ content: String, _ page: Int = 1, _ limit: Int = 20,  _ complete:@escaping (BYSearchListItem)->()) {
+    ///   - complete: 返回的结果闭包
+    static func loadResult(_ type: SearchType, _ content: String, page: Int = 1, _ limit: Int = 20,  _ complete: @escaping (BYSearchListItem?,_ error: String?)->()) {
         let typeStr = "\(type)"
         let para = [
             "method" : "\(typeStr).search",
             "\(typeStr)" : "\(content)",
             "api_key" : "\(BYAPIKey)",
             "format" : "json",
-            "page" : 1,
-            "limit" : 20
-        ] as [String : Any]
+            "page" : page,
+            "limit" : limit
+            ] as [String : Any]
         /// 请求数据
         Alamofire.request(BYBaseURL, method: .get, parameters: para, encoding: URLEncoding.default, headers: nil).responseJSON { (dataResponse: DataResponse<Any>) in
             guard let JSON = dataResponse.result.value as? [String : Any] else {
-                BYPrint("请求搜索数据失败")
+                complete(nil, "请求搜索数据失败, 请检查网络")
                 return
             }
             guard let results = JSON["results"] else {
@@ -85,7 +87,7 @@ extension BYSearchListItem {
                 BYPrint("字典转模型失败")
                 return
             }
-            complete(result)
+            complete(result, nil)
         }
     }
 }

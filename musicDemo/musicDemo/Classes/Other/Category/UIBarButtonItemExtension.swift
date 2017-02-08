@@ -7,7 +7,7 @@
 //
 
 /*
-
+ 
  UIBarButtonItem 类拓展
  */
 
@@ -45,6 +45,7 @@ extension UIBarButtonItem {
     ///   - badgeValue: 返回按钮上的提醒数字
     static func backItem(_ title: String?, badgeValue: String?, _ target: Any?, action: Selector) -> UIBarButtonItem {
         let button = UIButton()
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
         // 拼接返回标题
         if let badgeValue = badgeValue {
             let titleNew = title?.appending("(\(badgeValue))")
@@ -73,6 +74,9 @@ extension UIBarButtonItem {
         button.setImage(selectedImage, for: .selected)
         button.addTarget(target, action: action, for: .touchUpInside)
         button.sizeToFit()
+        if button.bounds.width > 80 {
+            button.frame.size.width = 80
+        }
         let contentView = UIView(frame: button.bounds)
         contentView.addSubview(button)
         return contentView

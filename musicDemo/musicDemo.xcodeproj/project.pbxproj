@@ -34,6 +34,17 @@
 		4BC6CAA91E4A090A0086DC1D /* BYBaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6CAA81E4A090A0086DC1D /* BYBaseItem.swift */; };
 		4BC6CAAB1E4A1A8B0086DC1D /* BYListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6CAAA1E4A1A8B0086DC1D /* BYListCell.swift */; };
 		4BCB7EED1E4AB7C700B9DE48 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB7EEC1E4AB7C700B9DE48 /* StringExtension.swift */; };
+		4BCB7EEF1E4AF1B400B9DE48 /* BYTopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB7EEE1E4AF1B400B9DE48 /* BYTopDetailView.swift */; };
+		4BCB7EF11E4AF1D300B9DE48 /* BYTopDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCB7EF01E4AF1D300B9DE48 /* BYTopDetailView.xib */; };
+		4BCB7EF41E4B159600B9DE48 /* BYWikiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB7EF21E4B159600B9DE48 /* BYWikiVC.swift */; };
+		4BCB7EF51E4B159600B9DE48 /* BYWikiVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCB7EF31E4B159600B9DE48 /* BYWikiVC.xib */; };
+		4BCB7EF71E4B195D00B9DE48 /* wiki.css in Resources */ = {isa = PBXBuildFile; fileRef = 4BCB7EF61E4B195D00B9DE48 /* wiki.css */; };
+		4BCB7EF91E4B196200B9DE48 /* wiki.js in Resources */ = {isa = PBXBuildFile; fileRef = 4BCB7EF81E4B196200B9DE48 /* wiki.js */; };
+		4BCB7EFE1E4B534700B9DE48 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4BCB7EFB1E4B534700B9DE48 /* 1.gif */; };
+		4BCB7EFF1E4B534700B9DE48 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4BCB7EFC1E4B534700B9DE48 /* 2.gif */; };
+		4BCB7F001E4B534700B9DE48 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4BCB7EFD1E4B534700B9DE48 /* 3.gif */; };
+		4BCB7F021E4B553600B9DE48 /* lanuch.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCB7F011E4B553600B9DE48 /* lanuch.png */; };
+		4BCB7F041E4B570200B9DE48 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCB7F031E4B570200B9DE48 /* 0.png */; };
 		8769D3842F50CA035E1C6066 /* Pods_musicDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8425D33B74CB8430B2A11D09 /* Pods_musicDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +78,17 @@
 		4BC6CAA81E4A090A0086DC1D /* BYBaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BYBaseItem.swift; sourceTree = "<group>"; };
 		4BC6CAAA1E4A1A8B0086DC1D /* BYListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BYListCell.swift; sourceTree = "<group>"; };
 		4BCB7EEC1E4AB7C700B9DE48 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4BCB7EEE1E4AF1B400B9DE48 /* BYTopDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BYTopDetailView.swift; sourceTree = "<group>"; };
+		4BCB7EF01E4AF1D300B9DE48 /* BYTopDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYTopDetailView.xib; sourceTree = "<group>"; };
+		4BCB7EF21E4B159600B9DE48 /* BYWikiVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BYWikiVC.swift; sourceTree = "<group>"; };
+		4BCB7EF31E4B159600B9DE48 /* BYWikiVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYWikiVC.xib; sourceTree = "<group>"; };
+		4BCB7EF61E4B195D00B9DE48 /* wiki.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = wiki.css; sourceTree = "<group>"; };
+		4BCB7EF81E4B196200B9DE48 /* wiki.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wiki.js; sourceTree = "<group>"; };
+		4BCB7EFB1E4B534700B9DE48 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
+		4BCB7EFC1E4B534700B9DE48 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		4BCB7EFD1E4B534700B9DE48 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
+		4BCB7F011E4B553600B9DE48 /* lanuch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lanuch.png; sourceTree = "<group>"; };
+		4BCB7F031E4B570200B9DE48 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		8425D33B74CB8430B2A11D09 /* Pods_musicDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9387D5A7349D92F0FA54CC4 /* Pods-musicDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-musicDemo/Pods-musicDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B8EB19C12B8C82B9F16F5D11 /* Pods-musicDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-musicDemo/Pods-musicDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +140,9 @@
 				4BC6CA521E48C3FC0086DC1D /* Assets.xcassets */,
 				4BC6CA541E48C3FC0086DC1D /* LaunchScreen.storyboard */,
 				4BC6CA571E48C3FC0086DC1D /* Info.plist */,
+				4BCB7EF61E4B195D00B9DE48 /* wiki.css */,
+				4BCB7EF81E4B196200B9DE48 /* wiki.js */,
+				4BCB7EFA1E4B534700B9DE48 /* Feature */,
 			);
 			path = musicDemo;
 			sourceTree = "<group>";
@@ -295,6 +320,8 @@
 			isa = PBXGroup;
 			children = (
 				4BC6CA8A1E48E6360086DC1D /* BYDetailVC.swift */,
+				4BCB7EF21E4B159600B9DE48 /* BYWikiVC.swift */,
+				4BCB7EF31E4B159600B9DE48 /* BYWikiVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,6 +336,8 @@
 		4BC6CA891E48E61A0086DC1D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4BCB7EEE1E4AF1B400B9DE48 /* BYTopDetailView.swift */,
+				4BCB7EF01E4AF1D300B9DE48 /* BYTopDetailView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +372,18 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4BCB7EFA1E4B534700B9DE48 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				4BCB7F011E4B553600B9DE48 /* lanuch.png */,
+				4BCB7F031E4B570200B9DE48 /* 0.png */,
+				4BCB7EFB1E4B534700B9DE48 /* 1.gif */,
+				4BCB7EFC1E4B534700B9DE48 /* 2.gif */,
+				4BCB7EFD1E4B534700B9DE48 /* 3.gif */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		B1CE2B98C69921993B9DD71D /* Pods */ = {
@@ -418,7 +459,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BCB7F041E4B570200B9DE48 /* 0.png in Resources */,
+				4BCB7F001E4B534700B9DE48 /* 3.gif in Resources */,
 				4BC6CA561E48C3FC0086DC1D /* LaunchScreen.storyboard in Resources */,
+				4BCB7EF51E4B159600B9DE48 /* BYWikiVC.xib in Resources */,
+				4BCB7EF91E4B196200B9DE48 /* wiki.js in Resources */,
+				4BCB7EFF1E4B534700B9DE48 /* 2.gif in Resources */,
+				4BCB7EF11E4AF1D300B9DE48 /* BYTopDetailView.xib in Resources */,
+				4BCB7F021E4B553600B9DE48 /* lanuch.png in Resources */,
+				4BCB7EFE1E4B534700B9DE48 /* 1.gif in Resources */,
+				4BCB7EF71E4B195D00B9DE48 /* wiki.css in Resources */,
 				4BC6CA531E48C3FC0086DC1D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +530,7 @@
 			files = (
 				4BC6CAA51E49B6380086DC1D /* BYArtistItem.swift in Sources */,
 				4BC6CA9B1E49A1940086DC1D /* BYPopTVC.swift in Sources */,
+				4BCB7EEF1E4AF1B400B9DE48 /* BYTopDetailView.swift in Sources */,
 				4BC6CA9F1E49B35F0086DC1D /* BYSearchListItem.swift in Sources */,
 				4BC6CA791E48CBB30086DC1D /* BYChoseRootVC.swift in Sources */,
 				4BC6CA9D1E49AEE90086DC1D /* BYListTVC.swift in Sources */,
@@ -487,6 +538,7 @@
 				4BC6CAA11E49B5630086DC1D /* BYAlbumItem.swift in Sources */,
 				4BCB7EED1E4AB7C700B9DE48 /* StringExtension.swift in Sources */,
 				4BC6CA931E48E9770086DC1D /* BYMineVC.swift in Sources */,
+				4BCB7EF41E4B159600B9DE48 /* BYWikiVC.swift in Sources */,
 				4BC6CAA31E49B5F20086DC1D /* BYTrackItem.swift in Sources */,
 				4BC6CAA71E49B8F40086DC1D /* BYWikiItem.swift in Sources */,
 				4BC6CAAB1E4A1A8B0086DC1D /* BYListCell.swift in Sources */,

@@ -5,12 +5,13 @@
 //  Created by Baleen.Y on 2/7/17.
 //  Copyright © 2017 Baleen.Y. All rights reserved.
 //
+/*
+ 搜索界面控制器
+ */
 
 import UIKit
-
-
 class BYSearchVC: UIViewController {
-
+    
     // MARK: - 属性
     var popOptionVC: BYPopTVC?
     lazy var listVC: BYListTVC = {
@@ -21,6 +22,7 @@ class BYSearchVC: UIViewController {
         let h = BYScreenHeight - y
         listVC.view.frame = CGRect(x: 0, y: y, width: w, height: h)
         self.view.addSubview(listVC.view)
+        self.addChildViewController(listVC)
         return listVC
     }()
     // MARK: - 重写方法
@@ -29,7 +31,7 @@ class BYSearchVC: UIViewController {
         setupNavigation()
         setupUI()
     }
-
+    
 }
 
 
@@ -42,7 +44,7 @@ extension BYSearchVC {
         }
         /// 创建搜索栏
         let searchBar = BYSearhBar()
-        searchBar.type = SearchType.track
+        searchBar.type = SearchType.album
         searchBar.delegate = self
         searchBar.frame = navigationBar.bounds
         navigationBar.addSubview(searchBar)
@@ -53,7 +55,7 @@ extension BYSearchVC {
         
         /// 创建弹出的选择框
         let popVC = BYPopTVC()
-        popVC.typeArr = [SearchType.track, SearchType.artist, SearchType.album]
+        popVC.typeArr = [SearchType.album, SearchType.artist, SearchType.track]
         popVC.modalPresentationStyle = .popover
         popVC.preferredContentSize = CGSize(width: BYSearchTypeCellW, height: BYSearchTypeCellH * CGFloat(BYSearchTypeCount))
         popOptionVC = popVC
@@ -96,26 +98,10 @@ extension BYSearchVC: BYSearhBarDelegate {
         popover(typeBtn)
     }
     func searchBarDone(searchBar: BYSearhBar, typeBtn: UIButton?, content: String) {
-
+        
         /// 拿到搜索的类型
         let type = SearchType(rawValue: typeBtn?.currentTitle ?? "单曲")!
-        
-        
-        
-        /// 加载数据
-        BYSearchListItem.loadResult(type, content) { (results: BYSearchListItem) in
-            self.listVC.currenPage = results.startPage
-            if let albums = results.albums {
-                self.listVC.resultAlbum = albums
-            }
-            if let artists = results.artists {
-                self.listVC.resultArtist = artists
-            }
-            if let tracks = results.tracks {
-                self.listVC.resultTrack = tracks
-            }
-            
-        }
+        listVC.para = (type, content)
         
     }
 }

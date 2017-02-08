@@ -24,12 +24,12 @@ struct BYChoseRootVC {
         #if DEBUG
             return BYFeatureVC()
         #else
-        if curVersion == preVersion {
-            return BYTabBarVC()
-        } else {  
-            BYStorage.set(curVersion, forKey: BYVersion)
-            return BYFeatureVC()
-        }
+            if curVersion == preVersion {
+                return BYTabBarVC()
+            } else {
+                BYStorage.set(curVersion, forKey: BYVersion)
+                return BYFeatureVC()
+            }
         #endif
     }
 }

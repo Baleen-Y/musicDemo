@@ -5,7 +5,9 @@
 //  Created by Baleen.Y on 2/7/17.
 //  Copyright © 2017 Baleen.Y. All rights reserved.
 //
-
+/*
+ 我的界面控制器, 时间关系，这里没做界面处理，有更多的好想法。
+ */
 import UIKit
 
 class BYMineVC: UIViewController {

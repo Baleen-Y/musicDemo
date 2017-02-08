@@ -6,6 +6,10 @@
 //  Copyright © 2017 Baleen.Y. All rights reserved.
 //
 
+/*
+ 详情介绍模型
+ */
+
 import UIKit
 
 class BYWikiItem: NSObject {

@@ -6,12 +6,21 @@
 //  Copyright © 2017 Baleen.Y. All rights reserved.
 //
 
+/*
+ 自定义的搜索工具栏
+ */
+
 import UIKit
 
+/// 搜索类型的枚举
+///
+/// - track: 单曲
+/// - artist: 艺术家
+/// - album: 专辑
 enum SearchType : String {
-    case track = "单曲"    /// 单曲
-    case artist = "艺术家"  /// 艺术家
-    case album = "专辑"    /// 专辑
+    case track = "单曲"
+    case artist = "艺术家"
+    case album = "专辑"
 }
 
 /// BYSearhBar 协议
@@ -26,7 +35,7 @@ protocol BYSearhBarDelegate {
 }
 
 class BYSearhBar: UIView {
-
+    
     // MARK: - 属性
     fileprivate var searchBar: UISearchBar?
     fileprivate var typeBtn: UIButton?
@@ -94,7 +103,7 @@ class BYSearhBar: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
 }
 
 // MARK: - UISearchBarDelegate
@@ -114,7 +123,7 @@ extension BYSearhBar: UISearchBarDelegate {
 extension BYSearhBar {
     @objc fileprivate func cancelClick() {
         searchBar?.resignFirstResponder()
-
+        
         if let delegate = delegate {
             delegate.searchBarCancel(searchBar: self)
         }

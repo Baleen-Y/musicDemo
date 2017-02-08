@@ -12,6 +12,7 @@
  */
 
 import UIKit
+import YYImage
 
 /// 页面指示器的尺寸
 fileprivate let pageIndicatorWH = 15
@@ -59,7 +60,7 @@ class BYFeaturePageView: UIView {
         // 添加图片
         for i in 0..<count {
             let img = pictures[i]
-            let imageView = UIImageView(image: img)
+            let imageView = YYAnimatedImageView(image: img)
             scrollView?.addSubview(imageView)
             let imageX = viewW * CGFloat(i)
             imageView.frame = CGRect(x: imageX, y: 0, width: viewW, height: viewH)

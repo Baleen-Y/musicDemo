@@ -6,17 +6,21 @@
 //  Copyright © 2017 Baleen.Y. All rights reserved.
 //
 
+/*
+ 主页面控制器
+ */
+
 import UIKit
 
 class BYHomeVC: UIViewController {
-
+    
     // MARK: - 重写方法
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
         setupUI()
     }
-
+    
 }
 
 // MARK: - 自定义方法
@@ -31,10 +35,19 @@ extension BYHomeVC {
         /// 跳转搜索界面
         let searchVC = BYSearchVC()
         let searchNav = BYNavigationVC(rootViewController: searchVC)
-        present(searchNav, animated: true, completion: nil)  
+        present(searchNav, animated: true, completion: nil)
     }
     /// 设置 UI
     fileprivate func setupUI() {
         view.backgroundColor = UIColor.white
+        /// 创建单曲列表的控制器
+        let listVC = BYListTVC()
+        listVC.para = (SearchType.track, "Believe")
+        automaticallyAdjustsScrollViewInsets = false
+        let y = BYStatusBarHeight + BYNavigationBarHeight
+        let h = BYScreenHeight - y - BYTabBarHeight
+        listVC.view.frame = CGRect(x: 0, y: y, width: BYScreenWidth, height: h)
+        addChildViewController(listVC)
+        view.addSubview(listVC.view)
     }
 }

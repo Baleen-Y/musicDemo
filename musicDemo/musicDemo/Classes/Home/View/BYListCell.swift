@@ -6,15 +6,18 @@
 //  Copyright © 2017 Baleen.Y. All rights reserved.
 //
 
+/*
+ 自定义列表的 cell
+ */
 import UIKit
 import YYWebImage
 
+/// 标识符
 fileprivate let identifier = "listCell"
 
 class BYListCell: UITableViewCell {
-
-    // MARK: - 属性
     
+    // MARK: - 属性
     var item: BYBaseItem? {
         didSet {
             guard let item = item else {
@@ -25,22 +28,30 @@ class BYListCell: UITableViewCell {
             self.iconImageView.yy_setImage(with: item.imageMedium.url(), placeholder: #imageLiteral(resourceName: "placeholder"))
             
             if item.isKind(of: BYAlbumItem.self) {
-                self.listenersLabel.isHidden = true
                 self.artistLabel.isHidden = false
                 self.artistLabel.text = (item as! BYAlbumItem).artist
             }
             
             if item.isKind(of: BYArtistItem.self) {
-                self.listenersLabel.isHidden = false
                 self.artistLabel.isHidden = true
-                self.listenersLabel.text = "\((item as! BYArtistItem).listeners)人已收听"
+                
             }
             
             if item.isKind(of: BYTrackItem.self) {
-                self.listenersLabel.isHidden = false
                 self.artistLabel.isHidden = false
                 self.artistLabel.text = (item as! BYTrackItem).artist
-                self.listenersLabel.text = "\((item as! BYTrackItem).listeners)人已收听"
+            }
+            
+            if item.listeners == 0 {
+                listenersLabel.isHidden = true
+            } else {
+                listenersLabel.isHidden = false
+                var count = CGFloat(item.listeners)
+                self.listenersLabel.text = "\(count)人已收听"
+                if count > 10000 {
+                    count = count / 10000.0
+                    self.listenersLabel.text = String(format: "%.1f万人已收听", count)
+                }
             }
         }
     }
@@ -72,7 +83,7 @@ class BYListCell: UITableViewCell {
         
         return cell as! BYListCell
     }
-
+    
 }
 
 // MARK: - 自定义方法
@@ -95,7 +106,7 @@ extension BYListCell {
         listenersLabel.font = UIFont.systemFont(ofSize: 13)
         listenersLabel.textColor = UIColor.lightGray
         self.listenersLabel = listenersLabel
-
+        
         /// 添加
         addSubview(iconImageView)
         addSubview(nameLabel)

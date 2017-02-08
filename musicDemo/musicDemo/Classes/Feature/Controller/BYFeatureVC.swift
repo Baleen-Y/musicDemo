@@ -11,6 +11,7 @@
  新特性的控制器
  */
 import UIKit
+import YYImage
 
 class BYFeatureVC: UIViewController {
 
@@ -18,7 +19,7 @@ class BYFeatureVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        let pictures = [UIImage(named:"1")!, UIImage(named:"2")!, UIImage(named:"3")!]
+        let pictures = [YYImage(named:"0.png")!,YYImage(named:"1.gif")!, YYImage(named:"2.gif")!, YYImage(named:"3.gif")!]
         let newFeatureView = BYFeaturePageView.pageView(pictures)
         newFeatureView.delegate = self
         newFeatureView.frame = BYScreenBounds

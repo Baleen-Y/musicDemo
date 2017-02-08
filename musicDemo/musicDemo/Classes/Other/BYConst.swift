@@ -8,9 +8,6 @@
 
 /*
  常量和自定义 log
- http://ws.audioscrobbler.com/2.0/?method=album.search&album=believe&api_key=9effd6f185e6ff3015599fc4f8e9539e&format=json&page=2&limit=20
- 
- http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=9effd6f185e6ff3015599fc4f8e9539e&artist=Cher&album=Believe&format=json
  */
 
 import UIKit
@@ -30,7 +27,7 @@ func BYPrint<T>(_ message:T,
 let BYScreenBounds = UIScreen.main.bounds
 let BYScreenWidth = BYScreenBounds.width
 let BYScreenHeight = BYScreenBounds.height
-let BYNavigationBarHeight:CGFloat = 44
+let BYNavigationBarHeight: CGFloat = 44
 let BYTabBarHeight: CGFloat = 49
 let BYStatusBarHeight: CGFloat = 20
 
@@ -55,4 +52,6 @@ let BYImageLargeWH: CGFloat = 174
 let BYImageExtralarge: CGFloat = 300
 let BYMargin: CGFloat = 10
 
+// MARK: - detail 相关
+let BYTopDeatailH: CGFloat = 120
 

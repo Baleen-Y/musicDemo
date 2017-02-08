@@ -5,7 +5,10 @@
 //  Created by Baleen.Y on 2/6/17.
 //  Copyright © 2017 Baleen.Y. All rights reserved.
 //
-
+/*
+ 谅解:
+ 由于时间关系还有 UI 小细节未处理，虽丑但是功能完善。
+ */
 import UIKit
 
 @UIApplicationMain

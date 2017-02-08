@@ -6,6 +6,10 @@
 //  Copyright © 2017 Baleen.Y. All rights reserved.
 //
 
+/*
+ 单曲模型
+ */
+
 import UIKit
 
 class BYTrackItem: BYBaseItem {
@@ -16,6 +20,14 @@ class BYTrackItem: BYBaseItem {
     /// 艺术家名
     var artist: String = ""
     
+    // MARK: - 重写方法
+    override class func getType() -> String {
+        return "track"
+    }
+    
+}
 
+// MARK: - MJExtension 配置
+extension BYTrackItem {
     
 }

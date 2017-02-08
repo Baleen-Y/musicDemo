@@ -5,13 +5,16 @@
 //  Created by Baleen.Y on 2/7/17.
 //  Copyright © 2017 Baleen.Y. All rights reserved.
 //
-
+/*
+ 搜索弹出选择类型控制器
+ */
 import UIKit
 
+/// cell 标识符
 fileprivate let identifier = "popCell"
 
 class BYPopTVC: UITableViewController {
-
+    // MARK: - 属性
     var typeBtn: UIButton?
     
     var typeArr: [SearchType]? {
@@ -19,14 +22,14 @@ class BYPopTVC: UITableViewController {
             tableView.reloadData()
         }
     }
-    
+    // MARK: - 重写方法
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor.lightGray
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
         tableView.separatorInset.left = 0
     }
-
+    
 }
 
 // MARK: - 数据源和代理方法
@@ -59,6 +62,6 @@ extension BYPopTVC {
         typeBtn?.setTitle(type, for: .normal)
         dismiss(animated: true, completion: nil)
     }
-
+    
 }
 
