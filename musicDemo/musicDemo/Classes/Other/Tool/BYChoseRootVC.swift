@@ -15,7 +15,8 @@ import UIKit
 fileprivate let BYVersion = "version"
 
 class BYChoseRootVC: NSObject {
-    
+    static let tabBarVC = BYTabBarVC()
+//    static let FeatureVC = BYFeatureVC()
     static func choseRootVC() -> UIViewController {
         /// 1. 获取当前版本号
         let curVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
@@ -26,7 +27,7 @@ class BYChoseRootVC: NSObject {
             return BYFeatureVC()
         #else
             if curVersion == preVersion {
-                return BYTabBarVC()
+                return tabBarVC
             } else {
                 BYStorage.set(curVersion, forKey: BYVersion)
                 return BYFeatureVC()

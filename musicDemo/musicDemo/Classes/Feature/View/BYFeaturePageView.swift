@@ -157,6 +157,8 @@ extension BYFeaturePageView: UIScrollViewDelegate {
                 return
             }
             let homeVC = delegate.featurePageView(featurePageView: self)
+            homeVC.view = UIApplication.shared.keyWindow?.rootViewController?.view.subviews[0]
+            UIApplication.shared.keyWindow?.rootViewController?.view.subviews[0].removeFromSuperview()
             UIApplication.shared.keyWindow?.rootViewController = homeVC
         }
     }

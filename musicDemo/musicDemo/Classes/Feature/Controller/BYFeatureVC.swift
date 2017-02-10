@@ -32,6 +32,6 @@ class BYFeatureVC: UIViewController {
 // MARK: - BYFeaturePageViewDelegate
 extension BYFeatureVC: BYFeaturePageViewDelegate {
     func featurePageView(featurePageView: BYFeaturePageView) -> UIViewController {
-        return BYTabBarVC()
+        return BYChoseRootVC.tabBarVC
     }
 }
